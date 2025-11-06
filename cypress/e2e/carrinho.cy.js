@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-
 import loginPage from "../pages/LoginPage"
 import CarrinhoPage from "../pages/CarrinhoPage"
 import { PRODUTOS } from "../constants/ProdutosConstants"
