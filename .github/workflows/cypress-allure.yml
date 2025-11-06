@@ -1,0 +1,39 @@
+name: Cypress Tests with Allure
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Executar testes Cypress
+        run: npx cypress run
+
+      - name: Gerar relatório Allure
+        run: npx allure generate allure-results --clean
+
+      - name: Upload do relatório Allure (HTML)
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
+
+      - name: Upload dos resultados brutos do Allure
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
