@@ -14,16 +14,16 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      - name: Configurar Node 18.19.0 (versão compatível)
+      - name: Configurar Node 18.18.2 (versão compatível)
         uses: actions/setup-node@v4
         with:
-          node-version: "18.19.0"
+          node-version: "18.18.2"
           cache: "npm"
 
       - name: Instalar dependências
         run: npm ci
 
-      - name: Executar testes Cypress no modo headless
+      - name: Executar testes Cypress
         run: npx cypress run
 
       - name: Gerar relatório Allure
