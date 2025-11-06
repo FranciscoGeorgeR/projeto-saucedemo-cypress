@@ -19,7 +19,7 @@ Este projeto tem como objetivo demonstrar uma automação de testes Web utilizan
 ---
 
 ## 📂 Estrutura do Projeto
-
+```
 cypress/
 e2e/ # Cenários de teste (describe/it)
 pages/ # Ações e interações com a interface
@@ -28,8 +28,7 @@ constants/ # Dados fixos, URLs, mensagens, etc
 support/ # Commands, sessão, configs globais
 .github/
 workflows/ # Pipeline de execução (CI/CD)
-
-yaml
+```
 ---
 
 ## 🧪 Execução dos Testes
@@ -37,30 +36,35 @@ yaml
 ### Modo interativo
 ```bash
 npm run cy:open
-Modo headless (utilizado no CI/CD)
-bash
+```
+### Modo headless (utilizado no CI/CD)
+```bash
 npm run cy:run
-📊 Relatório Allure (Gerado automaticamente)
+```
+#### 📊 Relatório Allure (Gerado automaticamente)
 O relatório é atualizado a cada push na branch main:
 
-🔗 Acessar relatório:
+## 🔗 Acessar relatório:
 https://franciscogeorger.github.io/projeto-saucedemo-cypress/
 
 Gerar localmente:
-bash
+```bash
 npm run allure:report
-🤖 Execução Automática (GitHub Actions)
+```
+
+#### 🤖 Execução Automática (GitHub Actions)
 Pipeline roda automaticamente em push e pull request
 
 Relatório Allure é publicado automaticamente via GitHub Pages
 
 Branch gh-pages contém a última versão do relatório
 
-Arquivo da pipeline:
+#### Arquivo da pipeline:
 
-bash
+```bash
 .github/workflows/cypress-allure.yml
+```
 
-👤 Autor
+### 👤 Autor
 Francisco George
 Analista de Qualidade / QA Automation
