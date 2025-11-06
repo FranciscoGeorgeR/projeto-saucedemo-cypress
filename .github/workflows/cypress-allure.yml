@@ -14,14 +14,11 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      - name: Configurar Node 18 (OBRIGATÓRIO)
+      - name: Configurar Node 18.19.0 (versão compatível)
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "18.19.0"
           cache: "npm"
-
-      - name: Limpar cache do NPM
-        run: npm cache clean --force
 
       - name: Instalar dependências
         run: npm ci
