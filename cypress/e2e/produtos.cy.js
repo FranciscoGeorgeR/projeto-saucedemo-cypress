@@ -1,5 +1,6 @@
+/// <reference types="cypress" />
+
 import produtosPage from "../pages/ProdutosPage"
-import loginPage from "../pages/LoginPage"
 import { PRODUTOS } from "../constants/ProdutosConstants";
 
 describe('Carrinho', () => {

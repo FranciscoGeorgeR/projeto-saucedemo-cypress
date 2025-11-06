@@ -1,4 +1,5 @@
-import loginPage from "../pages/LoginPage"
+/// <reference types="cypress" />
+
 import CarrinhoPage from "../pages/CarrinhoPage"
 import CheckoutPage from "../pages/CheckoutPage";
 import { PRODUTOS } from "../constants/ProdutosConstants"

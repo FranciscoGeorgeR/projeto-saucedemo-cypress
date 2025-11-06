@@ -1,4 +1,5 @@
-import loginPage from "../pages/LoginPage";
+/// <reference types="cypress" />
+
 import OrdenacaoPage from "../pages/OrdenacaoPage";
 
 describe('Ordenação de Produtos', () => {
